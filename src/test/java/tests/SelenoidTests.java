@@ -19,4 +19,13 @@ public class SelenoidTests {
                 .statusCode(200)
                 .body("total", is(20));
     }
+
+    @Test
+    void checkTotalGoodPractice() {
+        String responce =
+                get("https://selenoid.autotests.cloud/status")
+                        .then()
+                        .statusCode(200)
+                        .body("total", is(20));
+    }
 }
