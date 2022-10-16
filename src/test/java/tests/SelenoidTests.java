@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.is;
+import static io.restassured.RestAssured.get;
 
 public class SelenoidTests {
 
@@ -22,8 +23,7 @@ public class SelenoidTests {
 
     @Test
     void checkTotalGoodPractice() {
-        String responce =
-                get("https://selenoid.autotests.cloud/status")
+        get("https://selenoid.autotests.cloud/status")
                         .then()
                         .statusCode(200)
                         .body("total", is(20));
