@@ -12,6 +12,7 @@ def restAssuredVersion = '5.2.0',
 
 dependencies {
     testImplementation(
+            "com.codeborne:selenide:6.8.1",
             "io.rest-assured:rest-assured:$restAssuredVersion",
             "org.junit.jupiter:junit-jupiter:$junitVersion",
             "org.slf4j:slf4j-simple:$slf4jVersion"
